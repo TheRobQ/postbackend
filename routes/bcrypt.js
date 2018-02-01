@@ -3,7 +3,7 @@ const router = express.Router()
 const knex = require('../knex')
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser')
-const secret = process.env.SECRET || 'A4e2n84E0OpF3wW21'
+const secret = process.env.SECRET
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 
