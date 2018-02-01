@@ -11,8 +11,8 @@ const store = (req,res,sendit)=>{
   var salt = bcrypt.genSaltSync(6)
   var hash = bcrypt.hashSync(req.body.password, salt);
   knex('users').insert({
-    firstName:req.body.firstName,
-    lastName:req.body.lastName,
+    first_name:req.body.firstName,
+    last_name:req.body.lastName,
     email:req.body.email,
     password:hash
   },'*')
