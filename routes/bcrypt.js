@@ -19,7 +19,7 @@ const store = (req,res,sendit)=>{
   .then(user=>{
     res.status(204).send({id:user[0].id})
   })
-  .catch(err=>{next(err)})
+  .catch(err=>{res.status(502).send({err: 'error'})})
 }
 const compare = (req,res,sendit)=>{
   knex('users').where({
